@@ -1,38 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,800;0,900;1,300&display=swap');
+
+:root{
+  --clr-primary-accent: #18A08B;
+  --clr-secondary-light: #F4FAFF;
+  --clr-white: #FEFDFF ;
+  --clr-black: #0A0F0D;
+}
+
+*,*::after,*::before {
+  box-sizing: border-box;
+}
+
 .App {
+  background-color: var(--clr-white);
+  color: var(--clr-black);
+  font-family: 'Poppins', sans-serif;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.startCard , .questionCard{
+  background-color: var(--clr-secondary-light);
+  border: 0.125rem solid var(--clr-secondary-light);
+  border-radius: 2rem;
+  color: var(--clr-black);
+  box-shadow: var(--clr-secondary-light) 0px -6px 60px -60px, var(--clr-primary-accent) 0px 4px 12px -1px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.startCard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-height: 60vh;
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 1em;
+  width: 80%; 
 }
 
-.App-link {
-  color: #61dafb;
+.startButton {
+  border-radius: 1.5rem;
+  text-transform: capitalize;
+  font-size: 2rem;
+  padding: 0.75em 4em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.questionCard {
+  height: auto;
+  max-width: 56.25rem;
+  margin: 0 auto;
+  padding: 1em;
+  width: 80%; 
+}
+
+.questionText {
+  color: var(--clr-black);
+  font-size: 1.5rem;
+}
+
+.finalResults {
+  background-color: var(--clr-secondary-light);
+  border: 0.125rem solid var(--clr-secondary-light);
+  border-radius: 1em;
+  box-shadow: var(--clr-secondary-light) 0px -6px 60px -60px, var(--clr-primary-accent) 0px 2px 8px -1px;
+  color: var(--clr-black);
+  height: auto;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 4em;
+  padding: 1em;
+}
+
+h1{
+  padding: 0.75em 0;
+}
+
+h2{
+  padding: 0.25em 0;
+}
+
+br {
+  display: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  background-color: var(--clr-white);
+  border: 0.1875rem solid var(--clr-primary-accent);
+  border-radius: 1.25rem;
+  color: var(--clr-black);
+  cursor: pointer;
+  font-size: 1.25rem;
+  margin-top: 0.5em;
+  padding: 1em;
+}
+
+button {
+  background-color: var(--clr-primary-accent); /* Green */
+  border: none;
+  border-radius: 1.5em;
+  color: var(--clr-white);
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1em 1.5em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+button:hover {
+  transform: scale(1.1);
+  transition: transform 0.2s ease;
+}
+
+@media (max-width: 31.25rem) {
+
+  .startButton {
+    border-radius: 0.75rem;
+    padding: 0.28125em 1.5em;
   }
-  to {
-    transform: rotate(360deg);
+
+  .startCard {
+    width: 85%;
+  }
+  
+  .questionText{
+    font-size: 1.25rem;
+  }
+  
+  .finalResults{
+    width: 80%;
+  }
+  
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  br {
+    display: block;
+  }
+
+  li {
+    padding: 0.5em;
+  }
+
+  span {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 31.3125rem) {
+  li:hover {
+    background-color: var(--clr-primary-accent);
+    color: var(--clr-white);
+    cursor: pointer;
   }
 }
